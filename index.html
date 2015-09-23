@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Demonstartion of LockScroll.</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+  <h1>Lock Scroll Demo</h1>
+  <div id="state"><label>State:</label><span>Unlocked</span></div>
+  <div class="tool">
+    <button id="btn1">Lock</button>
+    <button id="btn2">Lock Vertical</button>
+    <button id="btn3">Lock Horizontal</button>
+    <button id="btn4">Unlock</button>
+  </div>
+  <div id="container">
+    <div class="row">
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+    </div>
+    <div class="row">
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+    </div>
+    <div class="row">
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+    </div>
+    <div class="row">
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+    </div>
+    <div class="row">
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+      <div class="component"></div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script src="js/jquery.lockscroll.min.js"></script>
+  <script>
+  $(function() {
+    $('#btn1').click(function() {
+      $("#state > span").text('Locked');
+      $('#container').lockscroll(true);
+    });
+    $('#btn2').click(function() {
+      $("#state > span").text('Vertical Locked');
+      $('#container').lockscroll(true, 'vertical');
+    });
+    $('#btn3').click(function() {
+      $("#state > span").text('Horizontal Locked');
+      $('#container').lockscroll(true, 'horizontal');
+    });
+    $('#btn4').click(function() {
+      $("#state > span").text('Unlocked');
+      $('#container').lockscroll(false);
+    });
+  });
+  </script>
+</body>
+</html>
