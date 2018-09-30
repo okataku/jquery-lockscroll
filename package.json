@@ -1,0 +1,25 @@
+{
+  "name": "jquery-lockscroll",
+  "version": "1.0.0",
+  "description": "The lockstate is jQuery plugin that provides you to lock or unlock scrolling of elements.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "http-server -c-1",
+    "build": "uglifyjs ./js/jquery.lockscroll.js -o ./js/jquery.lockscroll.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/okataku/jquery-lockscroll.git"
+  },
+  "author": "okataku",
+  "license": "Public Domain",
+  "bugs": {
+    "url": "https://github.com/okataku/jquery-lockscroll/issues"
+  },
+  "homepage": "https://github.com/okataku/jquery-lockscroll#readme",
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "uglify-js": "^3.4.9"
+  }
+}
